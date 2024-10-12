@@ -9,4 +9,3 @@ playButton.addEventListener("mouseout", () => {
 playButton.addEventListener("click", () => {
     playButton.innerHTML = "HAVE FUN";
 });
-

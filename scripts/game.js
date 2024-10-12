@@ -1,7 +1,7 @@
 "use strict";
 
 const player = {
-    playerName : sessionStorage.getItem("playerName"),
+    playerName : "player",
     startingCookie : 3,
     items : ["magnifyingGlass", "CouponToMaxi" , "Milkshake", " Ipad"]
 
@@ -16,14 +16,16 @@ const Dealer = {
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
-    displayInfo(player);
+    player.playerName = sessionStorage.getItem("playerName")
+    const playerName = document.getElementById("PlayerName");
+    playerName.innerText = player.playerName
     displayInfo(Dealer);
 }
 
 
+
 function displayInfo(player) {
-    const playerName = document.getElementById("PlayerName");
-    playerName.innerText=player.playerName;
+    
 }
 
 
